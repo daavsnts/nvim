@@ -14,10 +14,6 @@ return {
   },
 
   config = function()
-    local lsp_zero = require('lsp-zero')
-    lsp_zero.on_attach(function(client, bufnr)
-      lsp_zero.default_keymaps({buffer = bufnr})
-    end)
     local cmp = require('cmp')
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = vim.tbl_deep_extend(
@@ -32,9 +28,9 @@ return {
       ensure_installed = {
         "lua_ls",
         "cssls",
-        "volar", 
+        "volar",
         "intelephense",
-	"tsserver"
+        "tsserver"
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -69,8 +65,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
-        ['<Down>'] = cmp.mapping.select_next_item({behavior = 'select'}),
+        ['<Up>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
+        ['<Down>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
       }),
