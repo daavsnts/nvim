@@ -14,6 +14,10 @@ return {
   },
 
   config = function()
+    local lsp_zero = require('lsp-zero')
+    lsp_zero.on_attach(function(client, bufnr)
+      lsp_zero.default_keymaps({buffer = bufnr})
+    end)
     local cmp = require('cmp')
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = vim.tbl_deep_extend(
@@ -27,10 +31,10 @@ return {
     require("mason-lspconfig").setup({
       ensure_installed = {
         "lua_ls",
-        "rust_analyzer",
         "cssls",
         "volar", 
-        "intelephense"
+        "intelephense",
+	"tsserver"
       },
       handlers = {
         function(server_name) -- default handler (optional)
