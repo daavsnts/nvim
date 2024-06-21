@@ -31,7 +31,10 @@ return {
         "cssls",
         "volar",
         "intelephense",
-        "tsserver"
+        "tsserver",
+        "html",
+        "jsonls",
+          
       },
       handlers = {
         function(server_name) -- default handler (optional)
