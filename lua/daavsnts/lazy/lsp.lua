@@ -66,8 +66,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ['<Up>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
-        ['<Down>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
+        ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<Down>'] = cmp.mapping.select_next_item(cmp_select),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
       }),
