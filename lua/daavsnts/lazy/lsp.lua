@@ -33,8 +33,7 @@ return {
         "intelephense",
         "tsserver",
         "html",
-        "jsonls",
-          
+        "jsonls"
       },
       handlers = {
         function(server_name) -- default handler (optional)
