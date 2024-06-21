@@ -8,6 +8,7 @@ return {
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "j-hui/fidget.nvim",
@@ -73,6 +74,7 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
+        { name = 'nvim_lsp_signature_help' }
       }, {
         { name = 'buffer' },
       })
