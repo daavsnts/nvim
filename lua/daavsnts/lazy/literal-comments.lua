@@ -1,5 +1,5 @@
 return {
-  'bennypowers/template-literals-comments.nvim',
+  'bennypowers/template-literal-comments.nvim',
   opts = true,
   ft = {
     'javascript',
