@@ -31,7 +31,7 @@ return {
         "cssls",
         "volar",
         "intelephense",
-        "tsserver",
+        "ts_ls",
         "html",
         "jsonls"
       },
